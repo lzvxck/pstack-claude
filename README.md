@@ -12,7 +12,7 @@ verified merge-ready report, and the merge is always your click.
 ## Install
 
 ```bash
-/plugin marketplace add <path-or-github-url-of-this-repo>
+/plugin marketplace add https://github.com/lzvxck/pstack-claude
 /plugin install pstack@poteto-mode
 ```
 
