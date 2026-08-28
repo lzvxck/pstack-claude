@@ -1,0 +1,28 @@
+{
+  "name": "poteto-mode",
+  "owner": {
+    "name": "lzvxck"
+  },
+  "description": "Claude Code port of Lauren Tan's pstack. Rigorous agent workflows, Claude-only model routing, merge-ready autonomous tier.",
+  "plugins": [
+    {
+      "name": "pstack",
+      "source": "./plugins/pstack",
+      "description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Lauren Tan (original)"
+      },
+      "license": "MIT",
+      "keywords": [
+        "pstack",
+        "poteto-mode",
+        "workflow",
+        "principles",
+        "agent-style",
+        "subagents",
+        "unslop"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "pstack",
+  "displayName": "pstack (poteto-mode port)",
+  "version": "0.1.0",
+  "description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence. Ported from cursor/plugins/pstack to Claude Code, Claude-only models, merge-ready autonomous ceiling.",
+  "author": {
+    "name": "Lauren Tan"
+  },
+  "license": "MIT",
+  "keywords": [
+    "pstack",
+    "poteto-mode",
+    "workflow",
+    "principles",
+    "agent-style",
+    "subagents",
+    "unslop"
+  ]
+}
