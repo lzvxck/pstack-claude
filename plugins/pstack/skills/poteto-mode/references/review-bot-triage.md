@@ -118,3 +118,11 @@ Append new candidate learnings here during or after babysitting when they look t
 - Do not skip when: The narrow condition misses a case in the SAME category (another "binary unusable" errno such as `EACCES`, another transport-level failure), the unhandled path loses data or leaves partial state, or the retry is idempotent AND the original error is still surfaced.
 - Example signal: "only retries when X fails with ENOENT … never tries the fallback even when a working Y exists", pointing at code whose fallback exists for a missing dependency rather than a failed operation.
 - Source: one CLI-rename PR whose fallback existed for a missing binary rather than a failed command.
+
+### A cited in-repo rule is cheaply verifiable — read the rule file first
+
+- Confidence: candidate
+- Skip when: Never skip the verification itself; it costs one command. When a bot cites a rule that lives in the repo (`.claude/rules/*.md`, `AGENTS.md`, a lint config), open that file before classifying. The rule text settles fix-vs-dismiss outright and makes either reply concrete, because you can quote it.
+- Do not skip when: n/a — this is a verification shortcut, not a dismissal pattern. Note the trap it defuses: neighbouring code already full of the same violation reads like precedent and invites a dismissal, but an in-repo rule is usually written *against* that accumulation. Existing violations are evidence the rule was needed, not that it is dead.
+- Example signal: "`.claude/rules/code-quality.md`'s '<rule title>' rule explicitly forbids exactly this" on a diff whose neighbours already do the thing.
+- Source: one CLI PR where five new comments cited an issue number. The cited rule named PR numbers and review rounds as its examples, the same class of uncheckable pointer, and the six pre-existing citations in the same two files were precisely the debt the rule was written for. Fixed, not dismissed.
